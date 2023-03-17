@@ -25,5 +25,6 @@ int main(void)
 		}
 		b++;
 	}
+	putchar('\n');
 	return (0);
 }
