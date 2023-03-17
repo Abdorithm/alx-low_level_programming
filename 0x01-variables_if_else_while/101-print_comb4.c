@@ -9,14 +9,13 @@
  */
 int main(void)
 {
-	int x, n, m, b;
+	int x, n, m;
 
 	for (x = 0; x <= 7; x++)
 	{
-		b = 2;
-		for (n = 1; n <= 8; n++)
+		for (n = x+1; n <= 8; n++)
 		{
-			for (m = b; m <= 9; m++)
+			for (m = n+1; m <= 9; m++)
 			{
 				putchar('0' + x);
 				putchar('0' + n);
@@ -27,7 +26,6 @@ int main(void)
 					putchar(' ');
 				}
 			}
-			b++;
 		}
 	}
 	return (0);
