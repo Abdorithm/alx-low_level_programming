@@ -2,7 +2,24 @@
 #include <stdio.h>
 
 /**
+ * rep - prints repetitive space characters.
+ *
+ * @r: number of reps
+ *
+ * Return: void
+ */
+void rep(int r)
+{
+	int a;
+
+	for (a = 0; a < r; a++)
+		_putchar(' ');
+}
+
+/**
  * print_times_table - prints the 9 time tables.
+ *
+ * @n: number of multiples
  *
  * Return: void.
  */
@@ -16,20 +33,18 @@ void print_times_table(int n)
 		{
 			x = i;
 			_putchar('0');
-			_putchar(',');
-			for (j = 0; j < n; j++)
+			if (n != 0)
+				_putchar(',');
+			for (j = 0; j < n; j++, x += i)
 			{
 				if (x < 10)
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					rep(3);
 					_putchar('0' + x);
 				}
 				else if (x < 100)
 				{
-					_putchar(' ');
-					_putchar(' ');
+					rep(2);
 					y = x / 10;
 					_putchar('0' + (y % 10));
 					_putchar('0' + (x % 10));
@@ -40,12 +55,11 @@ void print_times_table(int n)
 					y = x / 100;
 					z = x / 10;
 					_putchar('0' + (y % 10));
-                    _putchar('0' + (z % 10));
+					_putchar('0' + (z % 10));
 					_putchar('0' + (x % 10));
 				}
-				if (j < n-1)
+				if (j < n - 1)
 					_putchar(',');
-				x += i;
 			}
 			_putchar('\n');
 		}
