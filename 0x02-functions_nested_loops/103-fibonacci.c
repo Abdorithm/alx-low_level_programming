@@ -19,6 +19,6 @@ int main(void)
 		x = y;
 		y = z;
 	}
-	printf("%lu%c", z, '\n');
+	printf("%lu%c", sum, '\n');
 	return (0);
 }
