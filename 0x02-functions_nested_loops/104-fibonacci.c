@@ -16,7 +16,7 @@ int main(void)
 	{
 		z = x + y;
 		printf("%lu", z);
-		if (i < 47)
+		if (i < 95)
 			printf(", ");
 		x = y;
 		y = z;
