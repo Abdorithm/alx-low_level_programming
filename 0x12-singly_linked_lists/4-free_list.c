@@ -1,10 +1,10 @@
 #include "lists.h"
 
-/*
- * free_list: frees the previously allocated list
- * @head: ...
+
+/**
+ * free_list - Realease the memory allocated for a list
  *
- * Return: ...
+ * @head: A pointer to the first node of the list to free
  */
 void free_list(list_t *head)
 {
