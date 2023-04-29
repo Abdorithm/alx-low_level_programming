@@ -1,7 +1,5 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_listint - prints the nodes of a linked list.
