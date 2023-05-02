@@ -1,4 +1,6 @@
 #include "main.h"
+#include <limits.h>
+#include <stdio.h>
 
 /**
  * main - check the code.
@@ -7,16 +9,13 @@
  */
 int main(void)
 {
-    int r;
-
-    r = _isalpha('H');
-    _putchar(r + '0');
-    r = _isalpha('o');
-    _putchar(r + '0');
-    r = _isalpha(108);
-    _putchar(r + '0');
-    r = _isalpha(';');
-    _putchar(r + '0');
+	print_times_table(3);
+    _putchar('\n');
+    print_times_table(5);
+    _putchar('\n');
+	print_times_table(1235);
+    _putchar('\n');
+	print_times_table(12);
     _putchar('\n');
     return (0);
 }

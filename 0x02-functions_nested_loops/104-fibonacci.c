@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	__int64_t i, x = 1, y = 2, z;
+	unsigned long int i, x = 1, y = 2, z;
 
 	printf("%lu, %lu, ", x, y);
 	for (i = 0; i < 96; i++)
