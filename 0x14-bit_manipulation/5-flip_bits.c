@@ -7,14 +7,13 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int xor, shift, i;
+	unsigned long int shift, i;
 	unsigned int j = 0;
 
-	xor = n ^ m;
 	for (i = 0; i < 32; i++)
 	{
 		shift = (1 << i);
-		if ((xor & shift) == shift)
+		if ((n & shift) != (m & shift))
 			j++;
 	}
 
