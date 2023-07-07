@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_binary - prints the binary representation of a number
@@ -11,11 +12,13 @@ void print_binary(unsigned long int n)
 	int flag;
 
 	flag = 0;
-	dev = (1 << 31);
+	dev = (1 << 30);
+	dev *= 2;
 
 	while (dev != 0)
 	{
-		result = n & dev;
+		result = (n & dev);
+		/* printf("%lu\n", result); */
 		if (result == dev)
 		{
 			flag = 1;
