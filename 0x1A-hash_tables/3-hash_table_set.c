@@ -23,9 +23,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(head->key, key) == 0)
 		{
+			free(head->value);
 			head->value = strdup(value);
 			if (head->value == NULL)
-			   return (0);	
+				return (0);
 			return (1);
 		}
 		head = head->next;
@@ -33,7 +34,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node = (hash_node_t *)malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (0);
-	node->key = (char *)key;
+	node->key = strdup(key);
+	if (node->key == NULL)
+		return (0);
 	node->value = strdup(value);
 	if (node->value == NULL)
 		return (0);
