@@ -15,9 +15,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int index;
 
 	if (strlen(key) == 0 || value == NULL || ht == NULL
-	   || ht->size == 0)
+	   || ht->size == 0 || ht->array == NULL || key == NULL)
 		return (0);
-	index = hash_djb2((const unsigned char *)key) % ht->size;
+	index = key_index((const unsigned char *)key, ht->size);
 	head = ht->array[index];
 	while (head != NULL)
 	{
